@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Doc Editor</title>
+   </head>
+
+<body>
+      
+<div class="containers">
+    <h4 id="title" >Doc Editor.</h4>
+    <div class="controls">
+      <!--Barra de ferramentas -->
+      <div class="main-controls">
+        <!--Menu suspenso file -->  
+        <div class="dropdown"><!--Div com file,menu suspenso e input:text -->
+            <button class="btn btn-primary dropdown-toggle"
+            data-bs-toggle="dropdown"><!--Link  para vincular a lista-->
+            File     
+            </button>  
+        
+            <div class="dropdown-menu"><!--Lista suspensa -->
+            <button id='new-btn'class="dropdown-item">Novo</button>
+            <button id='txt-btn' class="dropdown-item">Salvar em Txt</button>
+            <button id='pdf-btn' class="dropdown-item">Salver em Pdf</button>
+            </div>
+        <!--Espaço para escrevre o nome do arquivo editado -->    
+        </div>
+            <input id='filename-input' type="text" value="untitled">      
+      </div>
+      <!--Botão de ação -->
+     <div class='control-btn-container'>
+         <!--O id para o javascript,executar as determinadas açoes -->
+        <button id ='bold-btn' class="btn btn-dark control-btn">b</button>
+         <button  id ='underline-btn'
+         class="btn btn-dark control-btn">u</button>
+         <button  id ='italic-btn' class="btn btn-dark control-btn">i</button>
+         <input type="color"
+           id='color-btn'
+           class='control-btn' />
+     </div>  
+    
+    </div>
+
+    
+    <div id="content" contenteditable="true" spellcheck="false">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti nulla numquam soluta voluptates itaque, rerum, esse odio, nobis quidem quibusdam maiores. Voluptatibus id eligendi, quasi voluptates ab unde veritatis.
+    </div>
+</div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+     <script src="script.js"></script> 
+     <script src="
+     https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</body>
+
+</html>
